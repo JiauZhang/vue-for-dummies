@@ -4,12 +4,12 @@ let todo_id = 0;
 const todos = ref([
   {
     id: todo_id++,
-    text: "text #" + todo_id.toString() + ": a",
+    text: `text #${todo_id.toString()}: a`,
     done: false,
   },
   {
     id: todo_id++,
-    text: "text #" + todo_id.toString() + ": b",
+    text: `text #${todo_id.toString()}: b`,
     done: false,
   },
 ]);
@@ -22,7 +22,7 @@ function addTodo() {
   if (!newTodo.value.length) return;
   todos.value.push({
     id: todo_id++,
-    text: "text #" + todo_id.toString() + ": " + newTodo.value,
+    text: `text #${todo_id.toString()}: ${newTodo.value}`,
     done: false,
   });
   newTodo.value = "";

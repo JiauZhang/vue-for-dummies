@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { defineProps } from "vue";
 // props are readonly!
 const props = defineProps({
   propOne: {
@@ -11,8 +10,12 @@ const props = defineProps({
     default: "Getting Started!",
   },
 });
+
+const emit = defineEmits(["response"]);
+emit("response", "Message from Child!");
 </script>
 
 <template>
   <h2>{{ propOne }}. {{ propTwo }}</h2>
+  <slot></slot>
 </template>

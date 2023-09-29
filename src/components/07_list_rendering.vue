@@ -2,15 +2,15 @@
 import { ref } from "vue";
 let todo_id = 0;
 const todos = ref([
-  { id: todo_id++, text: "text #" + todo_id.toString() + ": a" },
-  { id: todo_id++, text: "text #" + todo_id.toString() + ": b" },
+  { id: todo_id++, text: `text #${todo_id.toString()}: a` },
+  { id: todo_id++, text: `text #" + ${todo_id.toString()}: b` },
 ]);
 const newTodo = ref("");
 function addTodo() {
   if (!newTodo.value.length) return;
   todos.value.push({
     id: todo_id++,
-    text: "text #" + todo_id.toString() + ": " + newTodo.value,
+    text: `text #${todo_id.toString()}: ${newTodo.value}`,
   });
   newTodo.value = "";
 }
