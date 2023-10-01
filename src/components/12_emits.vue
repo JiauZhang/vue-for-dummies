@@ -8,6 +8,6 @@ function receiveMessage(message) {
 </script>
 
 <template>
-  <Emit prop-one="12" prop-two="Emits" @response="receiveMessage" />
+  <Emit :prop-one="12" prop-two="Emits" @response="receiveMessage" />
   <p>{{ msg }}</p>
 </template>

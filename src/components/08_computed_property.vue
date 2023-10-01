@@ -13,6 +13,7 @@ const todos = ref([
     done: false,
   },
 ]);
+// https://vuejs.org/guide/essentials/class-and-style.html#binding-html-classes
 function isDone(todo) {
   if (todo.done) return "done";
   else return "";

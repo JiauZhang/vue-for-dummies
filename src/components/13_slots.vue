@@ -7,7 +7,7 @@ const msg = ref("slot message!");
 <template>
   <!-- https://vuejs.org/guide/components/slots.html#slot-content-and-outlet -->
   <!-- multiple slot outlets in a single component: https://vuejs.org/guide/components/slots.html#named-slots-->
-  <Emit prop-one="13" prop-two="Slots">
+  <Emit :prop-one="13" prop-two="Slots">
     <p>{{ msg }}</p>
   </Emit>
 </template>
